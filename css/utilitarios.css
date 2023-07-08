@@ -1,0 +1,245 @@
+.titulo {
+  font-size: 6rem;
+  font-family: 'Braah One', sans-serif;
+  color: transparent;
+  text-transform: uppercase;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.titulo::after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100px;
+  background: linear-gradient(45deg, #AB05FF, #065EFF);
+}
+
+.shadow {
+  text-shadow: 1px 3px 10px rgba(171,5,255,1);
+}
+
+.hover:hover {
+  opacity: 0.7;
+}
+
+/* IMAGENS */
+
+.icon {
+  width: 36px;
+  height: 36px;
+}
+
+.imagem-circulo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+/* TEXTOS */
+
+.texto-gradiente {
+  background-image: linear-gradient(45deg, #AB05FF, #065EFF);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.texto-nostalgic {
+  background-image: linear-gradient(to right, #B10053, #63001D);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.texto-herois {
+  background-image: linear-gradient(to right, #002377, #0d54e4);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.texto-viloes {
+  background-image: linear-gradient(to right, #500000, #FB2100);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.texto-cdb {
+  background-image: linear-gradient(to right, #B3DD66, #00B7E0);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.texto-estadual {
+  background-image: linear-gradient(to right, #002667, #00D6BD);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.texto-libertadores {
+  background-image: linear-gradient(to right, #FFB500, #160600);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.texto-sulamericana {
+  background-image: linear-gradient(to right, #000044, #ffffff);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.texto-legends {
+  background-image: linear-gradient(to right, #f0d41d, #CDCBC2);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.texto-compra {
+  background-color: rgb(0, 168, 0);
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bolder;
+  font-family: 'Lato', sans-serif;
+}
+
+.texto-venda {
+
+  background-color: rgb(206, 0, 0);
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bolder;
+  font-family: 'Lato', sans-serif;
+}
+
+.texto-cdb,
+.texto-estadual,
+.texto-herois,
+.texto-libertadores,
+.texto-nostalgic,
+.texto-sulamericana,
+.texto-viloes,
+.texto-legends {
+  font-size: 2.5rem;
+  font-weight: bolder; 
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #58585c;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* BORDAS */
+
+.border-gradiente {
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #AB05FF, #065EFF) 1;
+  background-clip: padding-box;
+}
+
+.border-nostalgic {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #B10053, #63001D) 1;
+  background-clip: padding-box;
+}
+
+.border-herois {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #002377, #0d54e4) 1;
+  background-clip: padding-box;
+}
+
+.border-viloes {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #500000, #FB2100) 1;
+  background-clip: padding-box;
+}
+
+.border-cdb {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #B3DD66, #00B7E0) 1;
+  background-clip: padding-box;
+
+}
+
+.border-estadual {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #002667, #00D6BD) 1;
+  background-clip: padding-box;
+}
+
+.border-libertadores {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #FFB500, #160600) 1;
+  background-clip: padding-box;
+}
+
+.border-sulamericana {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #ffffff, #000044) 1;
+  background-clip: padding-box;
+}
+
+.border-legends {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #f0d41d, #CDCBC2) 1;
+  background-clip: padding-box;
+}
+
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .titulo {
+    font-size: 4rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

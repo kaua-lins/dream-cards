@@ -1,0 +1,73 @@
+.jogador-informacao {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.carta-caixa {
+  background-color: #323235;
+  padding: 5px 20px;
+  border-radius: 3px;
+  border-left: 5px solid transparent;
+}
+
+.carta-image {
+  display: grid;
+  align-self: center;
+}
+
+.carta-nome,
+.carta-habilidade,
+.carta-preco-venda,
+.carta-preco-compra {
+  background-color: #4e4e53;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder; 
+  border-left: 3px solid #58585c;
+  text-align: center;
+} 
+
+@media (max-width: 999px) {
+  .carta-caixa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .jogador-informacao {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .jogador-informacao {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .jogador-informacao {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .jogador-informacao {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
