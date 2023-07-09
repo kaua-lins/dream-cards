@@ -15,6 +15,7 @@
         <button onclick="filtrarJogadores()">Pesquisar</button>
       </div>
       <ul class="lista-nav">
+        <li><a href="#compras">Compras/Vendas</a></li>
         <li><a href="#ca">Atacantes</a></li>
         <li><a href="#mei">Meio Campo</a></li>
         <li><a href="#ld">Laterais</a></li>
@@ -126,6 +127,24 @@
         
         </div>
       </section>
+
+      <h1 class="texto-gradiente titulo">COMPRA E VENDA</h1>
+      <div class="compra-venda" id="compras">
+        <h2 class="texto-gradiente">Adicione os jogadores que você deseja comprar ou vender e veja o valor total!</h2>
+        <div class="compra-venda-form">
+          <input type="text" id="nome-jogador" placeholder="Digite o nome do jogador" class="border-gradiente">
+          <button onclick="buscarJogador()">Adicionar</button>
+          <button id="limpar-preco-total" onclick="limparPrecoTotal();">Limpar</button>
+        </div>
+        <div class="compra-venda-info border-gradiente">
+          <p id="nome-carta">Nome: </p>
+          <p id="habilidade-carta">Habilidade: </p>
+          <p id="preco-compra">Preço de Compra: R$0</p>
+          <p id="preco-venda">Preço de Venda: R$0</p>
+          <p id="preco-compra-total">Preço de Compra Total: R$0</p>
+          <p id="preco-venda-total">Preço de Venda Total: R$0</p>
+        </div>
+      </div>
   </main>
   <script src="script.js"></script>
 </body>

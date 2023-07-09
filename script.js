@@ -36,7 +36,7 @@ const cartas = [
     imagem: "goleiro/495-bruno.png"
   },
   {
-    nome: "Pedro Perri",
+    nome: "Lucas Perri",
     habilidade: 490,
     precoCompra: 76015872,
     precoVenda: 76015872 / 4,
@@ -1301,6 +1301,8 @@ const mobileNavbar = new MobileNavBar (
 
 mobileNavbar.init();
 
+/* Filtrar jogadores na pesquisa */
+
 function filtrarJogadores() {
   const termoPesquisa = document.getElementById("termo-pesquisa").value.toLowerCase();
   const jogadores = document.getElementsByClassName("carta-nome");
@@ -1315,6 +1317,8 @@ function filtrarJogadores() {
   }
 }
 
+/* Validar envio com "enter" */
+
 function verificarTeclaEnter(event) {
   if (event.key === "Enter") {
     filtrarJogadores();
@@ -1326,3 +1330,91 @@ const botaoPesquisa = document.getElementById("botao-pesquisa");
 
 ofensivoPesquisa.addEventListener("keydown", verificarTeclaEnter);
 botaoPesquisa.addEventListener("click", filtrarJogadores);
+
+/* Compra e venda de jogadores */
+
+function buscarJogador() {
+  const nomeJogador = document.getElementById("nome-jogador").value.toLowerCase();
+  let precoCompra = 0;
+  let precoVenda = 0;
+  let precoCompraTotal = obterPrecoCompraTotal(); // Inicializar com o valor armazenado
+  let precoVendaTotal = obterPrecoVendaTotal();
+
+  for (const carta of cartas) {
+    if (carta.nome.toLowerCase() === nomeJogador) {
+      // Atualizar as informações de preço de compra e venda na tela]
+
+      const nomeCarta = document.getElementById("nome-carta")
+      nomeCarta.textContent = `Nome: ${carta.nome}`
+
+      const habilidadeCarta = document.getElementById("habilidade-carta")
+      habilidadeCarta.textContent = `Habilidade: ${carta.habilidade}`
+      
+      const precoCompraElemento = document.getElementById("preco-compra");
+      precoCompraElemento.textContent = `Preço de Compra: R$${carta.precoCompra.toLocaleString()}`;
+
+      const precoVendaElemento = document.getElementById("preco-venda");
+      precoVendaElemento.textContent = `Preço de Venda: R$${carta.precoVenda.toLocaleString()}`;
+
+      // Armazenar o preço da carta atual
+      precoCompra = Number(carta.precoCompra);
+      precoVenda = Number(carta.precoVenda);
+      break;
+    }
+  }
+
+  // Atualizar o preço total acumulado
+  precoCompraTotal += precoCompra;
+  const precoCompraTotalElemento = document.getElementById("preco-compra-total");
+  precoCompraTotalElemento.textContent = `Preço de Compra Total: R$${precoCompraTotal.toLocaleString()}`;
+
+  precoVendaTotal += precoVenda;
+  const precoVendaTotalElemento = document.getElementById("preco-venda-total");
+  precoVendaTotalElemento.textContent = `Preço de Venda Total: R$${precoVendaTotal.toLocaleString()}`;
+
+  // Armazenar o novo valor de precoCompraTotal no armazenamento local
+  armazenarPrecoCompraTotal(precoCompraTotal);
+  armazenarPrecoVendaTotal(precoVendaTotal);
+}
+
+// Função para obter o valor armazenado de precoCompraTotal do armazenamento local
+function obterPrecoCompraTotal() {
+  const precoCompraTotalArmazenado = localStorage.getItem("precoCompraTotal");
+  return precoCompraTotalArmazenado ? parseFloat(precoCompraTotalArmazenado) : 0;
+}
+
+function obterPrecoVendaTotal() {
+  const precoVendaTotalArmazenado = localStorage.getItem("precoVendaTotal");
+  return precoVendaTotalArmazenado ? parseFloat(precoVendaTotalArmazenado) : 0;
+}
+
+// Função para armazenar o novo valor de precoCompraTotal no armazenamento local
+function armazenarPrecoCompraTotal(valor) {
+  localStorage.setItem("precoCompraTotal", valor);
+}
+
+function armazenarPrecoVendaTotal(valor) {
+  localStorage.setItem("precoVendaTotal", valor);
+}
+
+function limparPrecoTotal() {
+  localStorage.removeItem("precoCompraTotal");
+  localStorage.removeItem("precoVendaTotal");
+  alert("O valor de preço de compra e venda total foi limpo.");
+
+  // Atualizar os valores exibidos na página
+  const precoCompraTotalElemento = document.getElementById("preco-compra-total");
+  precoCompraTotalElemento.textContent = `Preço de Compra Total: R$0`;
+
+  const precoVendaTotalElemento = document.getElementById("preco-venda-total");
+  precoVendaTotalElemento.textContent = `Preço de Venda Total: R$0`;
+}
+
+// Exemplo de uso:
+buscarJogador();
+const inputJogador = document.getElementById("nome-jogador");
+inputJogador.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    buscarJogador();
+  }
+});
