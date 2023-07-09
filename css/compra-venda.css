@@ -1,0 +1,35 @@
+.compra-venda {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.compra-venda h2 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+
+.compra-venda-form {
+  display: flex;
+  gap: 4px;
+}
+
+.compra-venda-form input {
+  background-color: #323235;
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #AB05FF, #065EFF) 1;
+  background-clip: inherit;
+  padding: 10px;
+  color: #fff;
+}
+
+.compra-venda-info p {
+  padding: 10px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
