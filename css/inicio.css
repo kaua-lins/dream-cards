@@ -27,7 +27,23 @@ main {
   font-size: 3rem;
   font-family: 'Montserrat Alternates', sans-serif;
   text-transform: uppercase;
-  text-align: center;
+  text-align: justify;
+  gap: 10px;
+  align-items: center;
+}
+
+.main-discord {
+  margin-top: 20px;
+}
+
+.main-discord a {
+  font-size: 2rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-transform: uppercase;
+  align-items: center;
 }
 
 .main-subtexto {
@@ -45,6 +61,7 @@ main {
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
+  font-weight: bold
 }
 
 .main-ligas {
@@ -109,6 +126,27 @@ main {
   .jogador-informacao {
     padding-left: 0px;
     padding-right: 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-discord img {
+    display: none;
+  }
+
+  .main-discord {
+    text-align: center;
+  }
+
+  .main-discord p {
+    padding: 15px;
+    background-color: #27282c;
+    margin-bottom: 6px;
+    border-radius: 5px;
+  }
+
+  .main-discord p:hover {
+    background-color: #414349;
   }
 }
 

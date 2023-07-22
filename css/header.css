@@ -11,7 +11,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 5px;
   position: fixed;
   width: 100%;
@@ -37,6 +37,7 @@ button {
   border: 1px solid;
   border-image: linear-gradient(to bottom, #AB05FF, #065EFF) 1;
   background-clip: inherit;
+  margin-left: 3px;
 }
 
 button {
@@ -54,6 +55,7 @@ button:hover {
   font-size: 2rem;
   color: #fff;
   position: relative;
+  font-weight: bold;
 }
 
 .lista-nav a::after{
@@ -116,6 +118,12 @@ button:hover {
     overflow-x: hidden;
   }
 
+  nav {
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
   .lista-nav {
     position: fixed;
     top: 7vh;
@@ -148,6 +156,12 @@ button:hover {
   #termo-pesquisa,
   button {
   padding: 5px
+  }
+
+  nav {
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 

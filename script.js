@@ -28,7 +28,7 @@ const cartas = [
   },
   {
     nome: "Bruno",
-    habilidade: 508,
+    habilidade: 495,
     precoCompra: 101726384,
     precoVenda: 101726384 / 4,
     colecao: 'viloes',
@@ -829,12 +829,12 @@ const cartas = [
   },
   {
     nome: "Roger Guedes",
-    habilidade: 485,
-    precoCompra: 56803481,
-    precoVenda: 56803481 / 4,
+    habilidade: 493,
+    precoCompra: 90536119,
+    precoVenda: 90536119 / 4,
     colecao: 'estadual',
     posicao: 'pe',
-    imagem: "ponta-esquerda/485-roger-guedes.png"
+    imagem: "ponta-esquerda/493-roger-guedes.png"
   },
   {
     nome: "Harlei",
@@ -1133,6 +1133,51 @@ const cartas = [
     posicao: 'zag',
     imagem: "zagueiro/531-roque-junior.png"
   },
+  {
+    nome: "Gabigol",
+    habilidade: 530,
+    precoCompra: 368045959,
+    precoVenda: 368045959 / 4,
+    colecao: 'cdb',
+    posicao: 'ca',
+    imagem: "centro-avante/530-gabigol.png"
+  },
+  {
+    nome: "Roger Guedes",
+    habilidade: 528,
+    precoCompra: 352585085,
+    precoVenda: 352585085 / 4,
+    colecao: 'cdb',
+    posicao: 'pe',
+    imagem: "ponta-esquerda/528-roger-guedes.png"
+  },
+  {
+    nome: "Gabriel Grando",
+    habilidade: 526,
+    precoCompra: 337124211,
+    precoVenda: 337124211 / 4,
+    colecao: 'cdb',
+    posicao: 'gol',
+    imagem: "goleiro/526-gabriel-grando.png"
+  },
+  {
+    nome: "Luciano",
+    habilidade: 525,
+    precoCompra: 329393774,
+    precoVenda: 329393774 / 4,
+    colecao: 'cdb',
+    posicao: 'ca',
+    imagem: "centro-avante/525-luciano.png"
+  },
+  {
+    nome: "Gabriel Mercado",
+    habilidade: 495,
+    precoCompra: 101726384,
+    precoVenda: 101726384 / 4,
+    colecao: 'libertadores',
+    posicao: 'zag',
+    imagem: "zagueiro/495-gabriel-mercado.png"
+  },
 ];
 
 // Função para ordenar as cartas pela habilidade (maior para menor)
@@ -1355,6 +1400,9 @@ function buscarJogador() {
 
       const precoVendaElemento = document.getElementById("preco-venda");
       precoVendaElemento.textContent = `Preço de Venda: R$${carta.precoVenda.toLocaleString()}`;
+
+      const fotoJogador = document.getElementById("foto-jogador");
+      fotoJogador.src = carta.imagem;
 
       // Armazenar o preço da carta atual
       precoCompra = Number(carta.precoCompra);

@@ -52,6 +52,22 @@
   color: transparent;
 }
 
+.texto-diamond{
+  background-image: linear-gradient(45deg, #37B8AE, #6ae4da);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.texto-gold {
+  background-image: linear-gradient(45deg, #DDB60D, #f3d54d);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .texto-nostalgic {
   background-image: linear-gradient(to right, #B10053, #63001D);
   -webkit-background-clip: text;

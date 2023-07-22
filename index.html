@@ -9,11 +9,6 @@
 <body>
   <header class="header">
     <nav class="nav">
-      
-      <div class="barra-pesquisa">
-        <input type="text" value="" id="termo-pesquisa" class="border-gradiente" placeholder="Pesquise o jogador!">
-        <button onclick="filtrarJogadores()">Pesquisar</button>
-      </div>
       <ul class="lista-nav">
         <li><a href="#compras">Compras/Vendas</a></li>
         <li><a href="#ca">Atacantes</a></li>
@@ -22,6 +17,10 @@
         <li><a href="#zag">Zagueiros</a></li>
         <li><a href="#gol">Goleiros</a></li>
       </ul>
+      <div class="barra-pesquisa">
+        <input type="text" value="" id="termo-pesquisa" class="border-gradiente" placeholder="Pesquise o jogador!">
+        <button onclick="filtrarJogadores()">Pesquisar</button>
+      </div>
       <div class="mobile-menu">
         <div class="linha-1"></div>
         <div class="linha-2"></div>
@@ -36,11 +35,20 @@
       </div>
 
       <div class="main-texto">
-        <h2>Seja <span class="texto-gradiente">bem vindo</span> ao nosso catálogo de <span class="texto-gradiente">cartas,</span> todas as cartas 89+ estarão aqui a fim de auxiliar na visualização rápida do <span class="texto-gradiente">nivel de habilidade, preço de compra e venda </span> de cada jogador, facilitando a criação de um bom elenco. <span class="texto-gradiente">Espero que goste!!</span></h2>
+        <h2>Seja <span class="texto-gradiente">bem-vindo</span> ao catálogo de <span class="texto-gradiente">cartas dreamteam,</span> todas as cartas com over 89+ estarão aqui a fim de auxiliar na visualização rápida do <span class="texto-gradiente">nivel de habilidade, preço de compra e venda </span> de cada jogador, facilitando a criação de um bom elenco. <span class="texto-gradiente">Espero que goste!!</span></h2>
+      </div>
+
+      <div class="main-discord">
+        <p class="border-gradiente-celular">
+          <a class="texto-gradiente" href="https://discord.gg/dreamteam" target="_blank">discord oficial do DreamTeam<img src="icons/icons8-discord-48.png" width="35px" alt="Discord icon"></a>
+        </p>
+        <p class="border-gradiente-celular">
+          <a class="texto-gradiente" href="https://discord.gg/dreamleagues" target="_blank">discord de campeonatos DreamTeam<img src="icons/icons8-discord-48.png" width="35px" alt="Discord icon"></a>
+        </p>
       </div>
 
       <div class="main-subtexto">
-        <p>Nos siga no <a href="https://discord.gg/WC5qN8vA" target="_blank" class="texto-gradiente hover">DISCORD </a>temos sorteios de plano <span class="texto-gradiente">premium</span> toda semana, campeonatos com premiação e vários eventos.</p>
+        <p>EM BREVE!! TEREMOS OS SEGUINTES <span class="texto-gradiente">CAMPEONATOS</span> COM PREMIAÇÃO DE PLANOS <span class="texto-gradiente">DREAM</span>,<span class="texto-diamond"> DIAMOND</span> E <span class="texto-gold"> GOLD</span></p>
       </div>
 
       <div class="main-ligas">
@@ -52,6 +60,7 @@
           <li>
             <img class="imagem-circulo" src="ligas/brasileirao-b-dl.png" alt="Brasileirão Série Brasileirão">
             Brasileirão Dream Série B
+            </a>
           </li>
           <li>
             <img class="imagem-circulo" src="ligas/la-liga-dl.png" alt="La ligas">
@@ -144,7 +153,8 @@
           <p id="preco-compra-total">Preço de Compra Total: R$0</p>
           <p id="preco-venda-total">Preço de Venda Total: R$0</p>
         </div>
-      </div>
+
+        <div class="foto-do-jogador"><img id="foto-jogador" alt="Foto do jogador" /></div>
   </main>
   <script src="script.js"></script>
 </body>
