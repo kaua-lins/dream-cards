@@ -19,7 +19,8 @@ const COLECAO_MAP = {
   "Heróis": "herois",
   "Copa do Brasil": "cdb",
   "Nostalgic": "nostalgic",
-  "Lendas": "legends"
+  "Lendas": "legends",
+  "Melhores Transferências": "melhorestransferencias"
 }
 
 // Função para exibir as cartas na página
@@ -99,7 +100,7 @@ const leContainer = document.getElementById("le-container");
 const zagContainer = document.getElementById("zag-container");
 const golContainer = document.getElementById("gol-container");
 
-fetch("https://cdn.dreamteam.futbol/cards/lkdkru9s.csv")
+fetch("https://cdn.dreamteam.futbol/cards/lke7itok.csv")
   .then(res => res.text())
   .then(csv => {
     const lines = csv.split("\n")
