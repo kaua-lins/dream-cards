@@ -24,6 +24,10 @@
   text-shadow: 1px 3px 10px rgba(171,5,255,1);
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .hover:hover {
   opacity: 0.7;
 }
@@ -149,7 +153,7 @@
 }
 
 .texto-melhorestransferencias {
-  background-image: linear-gradient(to right, #00f9fc, #008e88);
+  background-image: linear-gradient(to right, #36FFFF, #008885);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -258,6 +262,12 @@
 .border-legends {
   border-left: 5px solid;
   border-image: linear-gradient(to bottom, #f0d41d, #CDCBC2) 1;
+  background-clip: padding-box;
+}
+
+.border-melhorestransferencias {
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom,  #36FFFF, #008885) 1;
   background-clip: padding-box;
 }
 
