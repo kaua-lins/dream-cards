@@ -122,7 +122,7 @@ fetch("https://cdn.dreamteam.futbol/cards/lke7itok.csv")
         colecao: COLECAO_MAP[obj.collection],
         collection: obj.collection,
         posicao: obj.posicao.toLowerCase(),
-        imagem: `https://cdn.dreamteam.futbol/cards/dream-cards/${obj.card}.png`
+        imagem: `https://cdn.dreamteam.futbol/cards/dream-cards/${obj.card}.webp`
       })
     }
     console.log(`Loaded ${cartas.length} cards!`)
