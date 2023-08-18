@@ -101,7 +101,7 @@ const leContainer = document.getElementById("le-container");
 const zagContainer = document.getElementById("zag-container");
 const golContainer = document.getElementById("gol-container");
 
-fetch("https://cdn.dreamteam.futbol/cards/llfxe6ei.csv")
+fetch("https://cdn.dreamteam.futbol/cards/llfy3x9q.csv")
   .then(res => res.text())
   .then(csv => {
     const lines = csv.split("\n")
